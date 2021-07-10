@@ -1,0 +1,67 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+ 
+void deleteMas(int* source,int n, int size);
+
+
+int main()
+{
+    int mas[100];
+    int size = 100;
+    	int i;
+ 
+	for(i = 0;i< (size);i++)
+	{
+		
+		mas[i] = rand() %100 + 1;
+			
+	
+	}
+	
+	deleteMas(mas,92,size);
+	
+    return 0;
+}
+
+void deleteMas(int* source,int n, int size)
+{
+    int a = 0;
+	int i = 1;
+    int t = 0;
+    if (t < size) 
+    {
+        for (t = n+1; t< size; t++)
+        {
+            source[a]=source[t];
+            a = a +i;
+            
+            
+        }
+            
+    }
+   
+        while (a<100){
+            
+			source[a] = 0;
+            
+            a = a + i;
+        }
+    
+   	int z;
+ 
+	for(z = 0;z< (size);z++)
+	{
+		printf("%d\n",source[z]);
+		
+			
+	
+	}
+    
+}
+
+
+
+
+	
+
